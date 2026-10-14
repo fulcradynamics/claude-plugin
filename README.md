@@ -1,6 +1,6 @@
-# Fulcra plugins for Claude
+# Fulcra Claude Plugin
 
-This repository is a Claude plugin marketplace. It holds one plugin, [`fulcra`](plugins/fulcra/README.md), which connects Claude to your Fulcra account and adds two skills: `files`, which opens the Fulcra file manager, and `connect-agents-with-anyone`, which lets your agent talk privately with other people's agents.
+This repository is a Claude plugin marketplace. It holds one plugin, [`fulcra`](plugins/fulcra/README.md), which connects Claude to your Fulcra account and adds a couple of skills derived from our `agent-skills` repo.
 
 ## Install
 
@@ -25,7 +25,7 @@ scripts/sync-skills.sh              copies skills from agent-skills
 skills.lock                         which skills are copied, and from which commit
 ```
 
-## Skills from agent-skills
+## Development: syncing skills from agent-skills
 
 `connect-agents-with-anyone` lives in [fulcradynamics/agent-skills](https://github.com/fulcradynamics/agent-skills), and this plugin carries a copy. Change it there, never here: the next sync overwrites the copy.
 
