@@ -1,0 +1,15 @@
+{
+  "name": "fulcra",
+  "description": "Fulcra's plugins for Claude",
+  "owner": {
+    "name": "Fulcra Dynamics",
+    "url": "https://fulcradynamics.com"
+  },
+  "plugins": [
+    {
+      "name": "fulcra",
+      "source": "./plugins/fulcra",
+      "description": "Keep files and personal data in your Fulcra account and work with them from Claude: open a file manager with /files, save files Claude makes, share download links, and connect your agent privately with other people's agents."
+    }
+  ]
+}

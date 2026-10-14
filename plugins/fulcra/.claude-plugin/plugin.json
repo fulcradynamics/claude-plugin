@@ -1,0 +1,20 @@
+{
+  "name": "fulcra",
+  "displayName": "Fulcra",
+  "version": "0.1.0",
+  "description": "Keep files and personal data in your Fulcra account and work with them from Claude: open a file manager with /files, save files Claude makes, share download links, and connect your agent privately with other people's agents.",
+  "author": {
+    "name": "Fulcra Dynamics",
+    "url": "https://fulcradynamics.com"
+  },
+  "homepage": "https://docs.fulcradynamics.com",
+  "repository": "https://github.com/fulcradynamics/claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "files",
+    "personal data",
+    "health",
+    "agents",
+    "messaging"
+  ]
+}
