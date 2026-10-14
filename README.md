@@ -19,7 +19,7 @@ plugins/fulcra/
   .claude-plugin/plugin.json        the plugin's manifest
   .mcp.json                         the Fulcra MCP server (https://mcp.fulcradynamics.com/mcp)
   skills/files/SKILL.md             the files skill, /files in the / menu
-  skills/connect-agents-with-anyone/  copied from agent-skills; see below
+  skills/connect-our-agents/        copied from agent-skills; see below
   README.md                         the directory listing's description
 scripts/sync-skills.sh              copies skills from agent-skills
 skills.lock                         which skills are copied, and from which commit
@@ -27,7 +27,7 @@ skills.lock                         which skills are copied, and from which comm
 
 ## Development: syncing skills from agent-skills
 
-`connect-agents-with-anyone` lives in [fulcradynamics/agent-skills](https://github.com/fulcradynamics/agent-skills), and this plugin carries a copy. Change it there, never here: the next sync overwrites the copy.
+`connect-our-agents` lives in [fulcradynamics/agent-skills](https://github.com/fulcradynamics/agent-skills), and this plugin carries a copy. Change it there, never here: the next sync overwrites the copy.
 
 ```sh
 scripts/sync-skills.sh           # copy the skills in skills.lock from agent-skills' main

@@ -5,7 +5,7 @@ Keep files and personal data in your [Fulcra](https://fulcradynamics.com) accoun
 This plugin connects Claude to Fulcra's MCP server and adds two skills:
 
 - **`files`**: open a Fulcra file manager from the conversation, save files Claude makes, and get download links for files you keep in Fulcra.
-- **`connect-agents-with-anyone`**: connect Claude with the agent of anyone who uses Fulcra, such as a friend, a colleague or a company's support bot, and exchange messages that only the people in the connection can read.
+- **`connect-our-agents`**: connect Claude with the agent of anyone who uses Fulcra, such as a friend, a colleague or a company's support bot, and exchange messages that only the people in the connection can read.
 
 ## Set up
 
@@ -23,7 +23,7 @@ This plugin connects Claude to Fulcra's MCP server and adds two skills:
 - **`/files`**: type `/` in the message box and pick **files** (from Fulcra) to open the file manager. Browse folders, drop files from your computer in to upload them (up to 2 GB), and download files. Add a folder to open it there, as in `/files reports`. In Claude Code and Cowork, the command is `/fulcra:files`.
 - **Save what Claude makes**: ask Claude to save a spreadsheet, PDF, report or other file it made to Fulcra. Small files are sent directly; files up to 30 MB go through a short-lived upload link.
 - **Download**: ask Claude for a file from Fulcra, and it gives you a download link that works for 10 minutes.
-- **Connect with someone's agent**: ask Claude to connect with a person's agent, by their Fulcra user ID if you know it. If you don't, Claude writes a short invitation for you to send them. Then ask Claude to send them a message, or whether they've replied. You can also pick **connect-agents-with-anyone** from the `/` menu.
+- **Connect with someone's agent**: ask Claude to connect with a person's agent, by their Fulcra user ID if you know it. If you don't, Claude writes a short invitation for you to send them. Then ask Claude to send them a message, or whether they've replied. You can also pick **connect-our-agents** from the `/` menu.
 
 The Fulcra connector has more tools, such as reading health and activity data, recording your own data, and sharing with other Fulcra users. See the [MCP server documentation](https://docs.fulcradynamics.com/mcp/).
 
