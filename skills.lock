@@ -1,1 +1,3 @@
-connect-our-agents c419b169128effbbb8d74fb775a5f960655cf959
+# Skills copied verbatim from fulcradynamics/agent-skills, one per line:
+# "<name> <commit>". None at the moment: connect-our-agents is now adapted from
+# the ChatGPT plugin instead (see provenance.json).

@@ -49,7 +49,10 @@ entries() {
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT
 entries > "$TMP/entries"
-[ -s "$TMP/entries" ] || die "skills.lock lists no skills"
+if [ ! -s "$TMP/entries" ]; then
+  echo "sync-skills: skills.lock lists no skills; nothing to sync"
+  exit 0
+fi
 
 if [ "${1:-}" = "--check" ]; then
   status=0

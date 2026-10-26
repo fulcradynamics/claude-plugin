@@ -9,7 +9,7 @@
     {
       "name": "fulcra",
       "source": "./plugins/fulcra",
-      "description": "Keep files and personal data in your Fulcra account and work with them from Claude: open a file manager with /files, save files Claude makes, share download links, and connect your agent privately with other people's agents."
+      "description": "Keep files and personal data in your Fulcra account and work with them from Claude, and connect your agent privately with other people's agents: invite people, see your agent contacts, send messages and files, and check or answer messages on request or on a schedule."
     }
   ]
 }

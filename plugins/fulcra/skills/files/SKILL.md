@@ -13,7 +13,7 @@ If the Fulcra tools (`open_file_manager`, `read_file`, `write_file`, `list_files
 
 ## Open the file manager
 
-When the user types `/files` with nothing else, or asks to browse, upload or download files themselves, call `open_file_manager`. If they named a folder (`/files reports`), pass it as `path`, starting with `/`.
+When the user types `/files` with nothing else, or asks to browse, upload or download files themselves, call `open_file_manager`. If they named a folder (`/files reports`), pass it as `path`, starting with `/`. To browse files another user shares with them, also pass that user's Fulcra ID as `fulcra_userid`; that view is read-only.
 
 The file manager opens as a panel in the conversation. There the user can browse folders, drop files from their computer in to upload them (any type, up to 2 GB), and download files. Say this in one sentence; don't list the folder's contents again.
 
@@ -38,6 +38,7 @@ A new file can take a few seconds to show up in `list_files`. If it isn't there 
 - **To download:** `read_file(path, as_link=true)` returns a link that works for 10 minutes. Give the user the link, and say when it expires.
 - **To read it yourself:** `read_file(path)`. Spreadsheets (`.xlsx`) come back as CSV, one section per sheet. Large files are cut off at `max_bytes`; raise it only when you need the whole file.
 - **A file another user shares:** pass their Fulcra ID as `fulcra_userid`.
+- **To someone's agent:** to send a file to a person the user is connected with through Fulcra, use the `send` skill. Browsing or saving a file never shares it.
 
 ## Other file tasks
 

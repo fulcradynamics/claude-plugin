@@ -1,6 +1,6 @@
 # Fulcra Claude Plugin
 
-This repository is a Claude plugin marketplace. It holds one plugin, [`fulcra`](plugins/fulcra/README.md), which connects Claude to your Fulcra account and adds a couple of skills derived from our `agent-skills` repo.
+This repository is a Claude plugin marketplace. It holds one plugin, [`fulcra`](plugins/fulcra/README.md), which connects Claude to your Fulcra account and adds skills for files and for connecting with other people's agents.
 
 ## Install
 
@@ -18,32 +18,41 @@ This repository is a Claude plugin marketplace. It holds one plugin, [`fulcra`](
 plugins/fulcra/
   .claude-plugin/plugin.json        the plugin's manifest
   .mcp.json                         the Fulcra MCP server (https://mcp.fulcradynamics.com/mcp)
-  skills/files/SKILL.md             the files skill, /files in the / menu
-  skills/connect-our-agents/        copied from agent-skills; see below
+  skills/                           the skills; see below
   README.md                         the directory listing's description
-scripts/sync-skills.sh              copies skills from agent-skills
-skills.lock                         which skills are copied, and from which commit
+provenance.json                     where each skill came from, with source hashes
+scripts/check-upstream.py           what changed upstream since the skills were adapted
+scripts/check-tools.py              whether every tool the skills call exists on a server
+scripts/sync-skills.sh              copies skills verbatim from agent-skills (none at the moment)
+skills.lock                         which skills sync-skills.sh copies
 ```
 
-## Development: syncing skills from agent-skills
+## Where the skills come from
 
-`connect-our-agents` lives in [fulcradynamics/agent-skills](https://github.com/fulcradynamics/agent-skills), and this plugin carries a copy. Change it there, never here: the next sync overwrites the copy.
+- **The contact skills** (`agents-i-know`, `invite`, `send`, `check-messages`, `reply-to-messages`, `set-up-agent-contacts`, `connect-our-agents`) are adapted for Claude from the ChatGPT Fulcra plugin, [fulcradynamics/fulcra-openai-plugin](https://github.com/fulcradynamics/fulcra-openai-plugin). They're rewritten, not copied: Claude has no setup button, no native settings, no @-mentions and different scheduling, and the text is plainer. `provenance.json` records each file's source and a hash of the source content it was adapted from.
+- **`files`** is written for Claude.
+- **`connect-our-agents`** used to be a verbatim copy from [fulcradynamics/agent-skills](https://github.com/fulcradynamics/agent-skills). That skill still exists there, for agents that use the Fulcra CLI or other hosts; the plugin's version uses the connector's contact tools, which the CLI doesn't have.
+
+To see what changed upstream since the skills were adapted, and port it by hand:
 
 ```sh
-scripts/sync-skills.sh           # copy the skills in skills.lock from agent-skills' main
-scripts/sync-skills.sh <ref>     # from a branch, tag or commit
-scripts/sync-skills.sh --check   # fail if a copy differs from its commit in skills.lock
+scripts/check-upstream.py <fulcra-openai-plugin checkout>           # against its origin/main
+scripts/check-upstream.py <fulcra-openai-plugin checkout> <ref>     # against another ref
+scripts/check-upstream.py <fulcra-openai-plugin checkout> <ref> --repin   # after porting
 ```
 
-To add another skill from agent-skills, add a line `<skill-name> main` to `skills.lock` and run the sync.
+It lists changed sources and upstream skill files nothing here comes from yet (unless `provenance.json` lists them under `ignored_upstream`).
 
 ## Develop
 
 ```sh
 claude plugin validate .                  # the marketplace
 claude plugin validate ./plugins/fulcra   # the plugin
-claude --plugin-dir ./plugins/fulcra      # try it in Claude Code: /fulcra:files
+scripts/check-tools.py <fulcra-context-mcp checkout>   # every tool the skills call exists
+claude --plugin-dir ./plugins/fulcra      # try it in Claude Code: /fulcra:agents-i-know
 ```
+
+The contact skills need a Fulcra MCP server with the contact tools (fulcra-context-mcp PR #73). Check that `mcp.fulcradynamics.com` has them before releasing.
 
 To try it on claude.ai, zip `plugins/fulcra` and upload it under **Customize > Plugins > Add > Upload plugin**.
 

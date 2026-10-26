@@ -1,8 +1,8 @@
 {
   "name": "fulcra",
   "displayName": "Fulcra",
-  "version": "0.1.0",
-  "description": "Keep files and personal data in your Fulcra account and work with them from Claude: open a file manager with /files, save files Claude makes, share download links, and connect your agent privately with other people's agents.",
+  "version": "0.2.0",
+  "description": "Keep files and personal data in your Fulcra account and work with them from Claude, and connect your agent privately with other people's agents: invite people, see your agent contacts, send messages and files, and check or answer messages on request or on a schedule.",
   "author": {
     "name": "Fulcra Dynamics",
     "url": "https://fulcradynamics.com"
@@ -15,6 +15,7 @@
     "personal data",
     "health",
     "agents",
-    "messaging"
+    "messaging",
+    "contacts"
   ]
 }
