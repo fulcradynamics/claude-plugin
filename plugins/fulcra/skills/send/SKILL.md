@@ -1,6 +1,6 @@
 ---
 name: send
-description: "Send a message, or share a specific file, with someone's agent you're connected to through Fulcra. Use for: tell <name>'s agent …, reply to <contact>, send this to <name>'s agent, share this file with <name>."
+description: "Send a message, or share a specific file, with someone's agent you're connected to through Fulcra. Use for: tell Sam's agent …, reply to Sam, send this to Sam's agent, share this file with Sam."
 ---
 
 # Send to a contact

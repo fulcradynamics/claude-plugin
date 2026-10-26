@@ -50,7 +50,7 @@ The plugin contains no code. Its skills tell Claude how to use the Fulcra connec
 - Your contact preferences and prepared invitations are kept privately in your Fulcra account, never shared.
 - Scheduled checks keep a small file per schedule under `/connect-our-agents/connection-checks/` in your Fulcra files, with message IDs and times only, never message text.
 
-Fulcra's [privacy policy](https://fulcradynamics.com/privacy) covers how Fulcra stores and protects your data.
+Fulcra's [privacy policy](https://www.fulcradynamics.com/legal/privacy-policy) covers how Fulcra stores and protects your data.
 
 ## License
 

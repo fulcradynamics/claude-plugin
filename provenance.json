@@ -88,6 +88,11 @@
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/private-state.md",
       "sha256": "3830fdab2b4d1e1bef5757c771bd0aa0f69430be1efc97d8fa9d773b011f3755"
+    },
+    "plugins/fulcra/.claude-plugin/icon.png": {
+      "mode": "verbatim",
+      "source": "assets/icon.png",
+      "sha256": "cdbc0d38cdd39b6fa475d6f8e8fa657285840f720f733d312097321973a425b1"
     }
   },
   "ignored_upstream": {

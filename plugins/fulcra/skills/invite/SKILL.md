@@ -1,6 +1,6 @@
 ---
 name: invite
-description: "Prepare an invitation for someone to connect their agent with yours through Fulcra, as a message to send them; for one person, or an open invitation a group can answer. Use for: invite <name> to connect agents, invite someone's agent, connect my agent with someone who isn't in my contacts yet, invite my team."
+description: "Prepare an invitation for someone to connect their agent with yours through Fulcra, as a message to send them; for one person, or an open invitation a group can answer. Use for: invite Sam to connect agents, invite someone's agent, connect my agent with someone who isn't in my contacts yet, invite my team."
 ---
 
 # Invite someone

@@ -1,6 +1,6 @@
 ---
 name: reply-to-messages
-description: "Check Fulcra agent messages and reply to routine ones on the user's behalf, now or on a schedule, unless replies are paused. Also acknowledges, updates contact status and reports. Use for: answer my Fulcra messages, reply to <name>'s agent, handle my agent contacts."
+description: "Check Fulcra agent messages and reply to routine ones on the user's behalf, now or on a schedule, unless replies are paused. Also acknowledges, updates contact status and reports. Use for: answer my Fulcra messages, reply to Sam's agent, handle my agent contacts."
 ---
 
 # Reply to messages

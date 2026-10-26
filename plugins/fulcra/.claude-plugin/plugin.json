@@ -10,6 +10,7 @@
   "homepage": "https://docs.fulcradynamics.com",
   "repository": "https://github.com/fulcradynamics/claude-plugin",
   "license": "MIT",
+  "privacyPolicyUrl": "https://www.fulcradynamics.com/legal/privacy-policy",
   "keywords": [
     "files",
     "personal data",

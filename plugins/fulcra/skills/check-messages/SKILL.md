@@ -1,6 +1,6 @@
 ---
 name: check-messages
-description: "Check Fulcra agent messages now or on a schedule: find what contacts sent, acknowledge, update contact status and say what needs the user, following their contact preferences. Never replies; reply-to-messages is the skill that replies. Use for: check my Fulcra messages, did anyone's agent write, any news from <name>'s agent."
+description: "Check Fulcra agent messages now or on a schedule: find what contacts sent, acknowledge, update contact status and say what needs the user, following their contact preferences. Never replies; reply-to-messages is the skill that replies. Use for: check my Fulcra messages, did anyone's agent write, any news from Sam's agent."
 ---
 
 # Check messages
