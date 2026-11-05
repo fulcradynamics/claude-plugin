@@ -3,78 +3,78 @@
     "description": "The ChatGPT (OpenAI) Fulcra plugin, whose skills these are adapted from",
     "repository": "https://github.com/fulcradynamics/fulcra-openai-plugin",
     "branch": "main",
-    "commit": "6946b57705c828d69fa3366e7b3390068beca84e"
+    "commit": "5986b9de5f8f3ea57e6084effdc37aedc16c06f0"
   },
   "files": {
     "plugins/fulcra/skills/agents-i-know/SKILL.md": {
       "mode": "adapted",
       "source": "skills/agents-i-know/SKILL.md",
-      "sha256": "a42890fc63e83ca56ffd73a291c075f5cc2fabfbe83def837953da970f372c02"
+      "sha256": "5ebbd3d7847b1467b0226345fb8e55347ec8503eb137f4c5536eafccbad624d0"
     },
     "plugins/fulcra/skills/invite/SKILL.md": {
       "mode": "adapted",
       "source": "skills/invite/SKILL.md",
-      "sha256": "ee4eaf1a49b73087cc59eb4bb5681886d19b6565cb098dc48411c68dc4442232"
+      "sha256": "c22bae4e95b095f48cf436b717d9ea90e98d1ccf62861202d8b4e31264b1dc81"
     },
     "plugins/fulcra/skills/send/SKILL.md": {
       "mode": "adapted",
       "source": "skills/send/SKILL.md",
-      "sha256": "096112aca7d26e91ce0468d1c10c4ecde6ab837abe8dd3d0a681c5f38cdad690"
+      "sha256": "a04842721394d6bf7593a80750897efc7c221298b38b479f690462561d9c4374"
     },
     "plugins/fulcra/skills/check-messages/SKILL.md": {
       "mode": "adapted",
       "source": "skills/check-messages/SKILL.md",
-      "sha256": "0bd239a67e82516ba2ec3d6cbcc6080a32c0843a5db49bcafc7d31389674f249"
+      "sha256": "ef5ac4c3595d87f7aa44c6ff0ed9e4f12fcc09f6c49def0ef50abb493d770ab6"
     },
     "plugins/fulcra/skills/reply-to-messages/SKILL.md": {
       "mode": "adapted",
       "source": "skills/reply-to-messages/SKILL.md",
-      "sha256": "76867622e684abdc98404dbca8983ad64a258450c29de692e0c0267a743cb798"
+      "sha256": "bf12df500bc1733c0c467fcdaf649223cb7a7d09bac7222900e7dbf91a86fb8b"
     },
     "plugins/fulcra/skills/set-up-agent-contacts/SKILL.md": {
       "mode": "adapted",
       "source": "skills/set-up-agent-contacts/SKILL.md",
-      "sha256": "ed6e3bc59c71a99f1396167d24c091e07fc5b7b7e3d2303040a6e94a75959ec1"
+      "sha256": "aac0a560dcfcc553f692c7adad5a4d97b057c6e5ccae37fb02661324670c90f7"
     },
     "plugins/fulcra/skills/connect-our-agents/SKILL.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/SKILL.md",
-      "sha256": "d17c450ecc5da8267640cc1328b637d584e3fd1449c8669d621d43d100091064"
+      "sha256": "57c892bbedfbf1f1bf07b067d7c377a8fae21d5a30da68ae93d0a67ca4c53c90"
     },
     "plugins/fulcra/skills/connect-our-agents/references/mcp.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/mcp.md",
-      "sha256": "8f47d4534fe52991cbc8da6796bc22263e7f1739d444585ca4d4e19f9dde76e6"
+      "sha256": "1e4795f23e24d892805fa897900c433476aa732ba167d5f5b09c7c37a969471f"
     },
     "plugins/fulcra/skills/connect-our-agents/references/invite.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/invite.md",
-      "sha256": "086a72788f1c23d4a6b6f351f15fda348ab3a5949c42d63162454bc9cecbe307"
+      "sha256": "8287eb0302eaa5151f72140db35e93aed6003857913ddddc8623f24f3fc35454"
     },
     "plugins/fulcra/skills/connect-our-agents/references/contact-preferences.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/contact-preferences.md",
-      "sha256": "163e26fa1918c7dc65bb2b79628699764681852ca28bc571c4b4772a38e44063"
+      "sha256": "dfa4a8811e4d891235ab93859cb10e48210e7ab9771da8bf33051f7cf46c2ed1"
     },
     "plugins/fulcra/skills/connect-our-agents/references/connection-compatibility.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/connection-compatibility.md",
-      "sha256": "562bddf2ee10138611e286e356450cb7b19c299266c19d9c444e20bd3520e13f"
+      "sha256": "14381690b5aa72a5358b88f57e7b3762d31c19c7cfe03256a451c73435911849"
     },
     "plugins/fulcra/skills/connect-our-agents/references/scheduled-checks.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/scheduled-checks.md",
-      "sha256": "790194dc0128e927118ab430624c2f8a81d53416dc2570f99ecb5b6007cb6967"
+      "sha256": "7cfe5fa9111f5366176f77ee27848122e90d95dae3357401c754ad4975796fde"
     },
     "plugins/fulcra/skills/connect-our-agents/references/legacy-mesh.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/legacy-mesh.md",
-      "sha256": "5428677962f4bc0c113edf128f47be8051ed2abb588fcc7eb5ca835e5ca8afed"
+      "sha256": "5006e5402a2acc7002b6b0db9557cfbd21be6ab4a99fe3a7b5b77aa8b6c806ff"
     },
     "plugins/fulcra/skills/connect-our-agents/references/channel-fields.json": {
       "mode": "verbatim",
       "source": "skills/connect-our-agents/references/channel-fields.json",
-      "sha256": "738eeca8d98e06cac7103e4488f2797d705f0b7b41e9c89b2bb8b9ef510a3350"
+      "sha256": "3a46092eec69f04de4036e76fda48e84b7fd029455289ab77762a31b177c9a52"
     },
     "plugins/fulcra/skills/connect-our-agents/references/message.example.json": {
       "mode": "verbatim",
@@ -87,12 +87,22 @@
     "plugins/fulcra/skills/connect-our-agents/references/private-state.md": {
       "mode": "adapted",
       "source": "skills/connect-our-agents/references/private-state.md",
-      "sha256": "3830fdab2b4d1e1bef5757c771bd0aa0f69430be1efc97d8fa9d773b011f3755"
+      "sha256": "8ac7420d6d37f3962d8d5baed529291206a23b6746026ff34d2fb83a5fc09e92"
     },
     "plugins/fulcra/.claude-plugin/icon.png": {
       "mode": "verbatim",
       "source": "assets/icon.png",
       "sha256": "cdbc0d38cdd39b6fa475d6f8e8fa657285840f720f733d312097321973a425b1"
+    },
+    "plugins/fulcra/skills/connect-our-agents/references/channel-metadata.md": {
+      "mode": "adapted",
+      "source": "skills/connect-our-agents/references/channel-metadata.md",
+      "sha256": "ec8ec22aa0db54e1ca9c7b653425d752da05159d31bd6a7242dd4559730364cc"
+    },
+    "plugins/fulcra/skills/connect-our-agents/references/channel-description-format.md": {
+      "mode": "adapted",
+      "source": "skills/connect-our-agents/references/channel-description-format.md",
+      "sha256": "ea51e0baec45ba39dd723fc2e292fea7f7d456f3809da9ae20c9b50ceb92c80f"
     }
   },
   "ignored_upstream": {

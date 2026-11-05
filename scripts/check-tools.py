@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Check every tool the plugin's skills call exists on a Fulcra MCP server.
 
-Lists the tools a fulcra-context-mcp checkout offers as the hosted server
-(model-visible ones, the way a client sees them) and compares them with every
-`tool_name(` call written in the skills.
+Lists the tools a fulcra-context-mcp checkout offers on the plugin's endpoint,
+/claude/mcp (or /mcp in checkouts that predate it), model-visible ones the way a
+client sees them, and compares them with every `tool_name(` call written in the
+skills.
 
     scripts/check-tools.py <fulcra-context-mcp checkout>
 
@@ -22,25 +23,28 @@ ROOT = Path(__file__).resolve().parent.parent
 SKILLS = ROOT / "plugins" / "fulcra" / "skills"
 
 # Tools a skill calls only if offered, with the alternative it falls back to.
-OPTIONAL: dict[str, str] = {}
+OPTIONAL: dict[str, str] = {
+    "accept_agent_invitation": "Connecting with the generic tools",
+}
 
 LIST_TOOLS = """
 import asyncio, json
 from fastmcp import Client
-from fulcra_mcp.main import mcp
+import fulcra_mcp.main as main
+server = getattr(main, "claude_mcp", main.mcp)
 async def go():
-    async with Client(mcp) as c:
+    async with Client(server) as c:
         tools = await c.list_tools()
     names = [t.name for t in tools
              if "model" in ((t.meta or {}).get("ui") or {}).get("visibility", ["model"])]
-    print(json.dumps(names))
+    print(json.dumps({"endpoint": getattr(main, "CLAUDE_MCP_PATH", "/mcp"), "tools": names}))
 asyncio.run(go())
 """
 
 CALL = re.compile(r"`([a-z][a-z0-9]*(?:_[a-z0-9]+)+)\(")
 
 
-def offered(checkout: str) -> set[str]:
+def offered(checkout: str) -> tuple[str, set[str]]:
     out = subprocess.run(
         ["uv", "run", "--directory", checkout, "python", "-c", LIST_TOOLS],
         env={**os.environ, "FULCRA_ENVIRONMENT": "prod"},
@@ -48,7 +52,8 @@ def offered(checkout: str) -> set[str]:
         text=True,
         check=True,
     ).stdout
-    return set(json.loads(out.strip().splitlines()[-1]))
+    data = json.loads(out.strip().splitlines()[-1])
+    return data["endpoint"], set(data["tools"])
 
 
 def called() -> dict[str, list[str]]:
@@ -63,7 +68,7 @@ def main() -> int:
     if len(sys.argv) != 2:
         print(__doc__.strip(), file=sys.stderr)
         return 2
-    tools = offered(sys.argv[1])
+    endpoint, tools = offered(sys.argv[1])
     missing = 0
     for name, where in sorted(called().items()):
         if name in tools:
@@ -74,7 +79,7 @@ def main() -> int:
         else:
             print(f"MISSING: {name} in {files}")
             missing += 1
-    print(f"{len(tools)} model-visible tools offered; {missing} missing")
+    print(f"{endpoint}: {len(tools)} model-visible tools offered; {missing} missing")
     return 1 if missing else 0
 
 
