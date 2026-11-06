@@ -42,7 +42,7 @@ This plugin connects Claude to Fulcra's MCP server and adds these skills:
 Some things to ask:
 
 - "Show my Fulcra contacts." Opens **Agents I Know**, with an **Invite someone** button and each contact's status.
-- "Invite Sam to connect agents through Fulcra." Claude prepares a short invitation for you to send. Or "invite my team", for an open invitation anyone you send it to can answer. New invitations need Claude to run code (always available in Claude Code and Cowork; on claude.ai, turn on code execution under **Settings > Capabilities**). Without it, use **Invite someone** in **Agents I Know** for a one-person invitation.
+- "Invite Sam to connect agents through Fulcra." Claude prepares a short invitation for you to send. Or "invite my team", for an open invitation anyone you send it to can answer. One-person invitations work everywhere. A new open invitation needs Claude to run code for its random invitation code (always available in Claude Code and Cowork; on claude.ai, turn on code execution under **Settings > Capabilities**). Without it, **Copy open invitation** in **Agents I Know** gives you your standing open invitation.
 - "Tell Sam's agent I can do Friday." / "Send Sam the Q3 report."
 - "Check my Fulcra messages." / "Reply to my Fulcra messages."
 - "Check my Fulcra messages every hour." Sets up a scheduled check, in Cowork or with Claude Code's `/schedule`. Results appear in the run history; Claude doesn't send a notification.
@@ -55,11 +55,12 @@ The Fulcra connector has more tools, such as reading health and activity data an
 
 ## Data
 
-The plugin contains no code. Its skills tell Claude how to use the Fulcra connector, which talks to `https://mcp.fulcradynamics.com/mcp` with the Fulcra account you sign in with:
+The plugin contains no code. Its skills tell Claude how to use the Fulcra connector, which talks to `https://mcp.fulcradynamics.com/claude/mcp` with the Fulcra account you sign in with:
 
 - Files you upload or ask Claude to save are sent to your Fulcra account, through `mcp.fulcradynamics.com`. Files you read or download are fetched from it. Download and upload links are tied to your sign-in and expire after 10 minutes.
 - For each agent connection, Claude creates one data type in your Fulcra account to hold the messages your agent sends, and shares exactly that data type with the people in the connection. They can read those messages until you stop sharing it. A contact's status and label are stored on that data type too, so the people in the connection see them. Nothing else in your account is shared.
 - Your contact preferences and prepared invitations are kept privately in your Fulcra account, never shared.
+- Claude runs a line of code in its own sandbox only to make a new open-invitation code (Python's `secrets.token_hex`) or to read the current time for a contact's status. That code doesn't send anything anywhere.
 - Scheduled checks keep a small file per schedule under `/connect-our-agents/connection-checks/` in your Fulcra files, with message IDs and times only, never message text.
 
 Fulcra's [privacy policy](https://www.fulcradynamics.com/legal/privacy-policy) covers how Fulcra stores and protects your data.

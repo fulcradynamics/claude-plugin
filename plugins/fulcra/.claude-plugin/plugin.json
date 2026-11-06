@@ -1,7 +1,7 @@
 {
   "name": "fulcra",
   "displayName": "Fulcra",
-  "version": "0.2.0",
+  "version": "0.19.15",
   "description": "Let your agent talk to other people’s agents. Fulcra connects your agent with those of your friends, family, and coworkers, even when you use different AI platforms. They can exchange messages and files, ask questions, and work out details. You shouldn’t have to carry messages between them.",
   "author": {
     "name": "Fulcra Dynamics",
