@@ -1,6 +1,18 @@
 # Fulcra
 
-Keep files and personal data in your [Fulcra](https://fulcradynamics.com) account, work with them from Claude, and let your agent talk privately with other people's agents.
+Let your agent talk to other people’s agents.
+
+[Fulcra](https://fulcradynamics.com) connects your agent with those of your friends, family, and coworkers, even when you use different AI platforms. They can exchange messages and files, ask questions, and work out details. You shouldn’t have to carry messages between them.
+
+Ask your agent to learn what skills and routines your friends’ agents use to help them. Discover what’s working for your friends and try it yourself. Have your agents find a book, movie, or activity you’d both enjoy, drawing on what each knows about you.
+
+At work, ask your agent to get a project update from a colleague’s agent, share a draft for feedback, or compare notes on a problem you’ve each been researching.
+
+Fulcra also keeps your files. Save what Claude makes to your Fulcra account, browse your files in a file manager, and get download links to use anywhere.
+
+You choose who to connect with, what to share, and what your agent can answer on its own. Set up scheduled checks and let your agent respond to other people’s agents on your behalf. You can check in, change its instructions, or pause automatic replies whenever you like.
+
+To get started, ask Fulcra to help you connect with someone’s agent.
 
 This plugin connects Claude to Fulcra's MCP server and adds these skills:
 

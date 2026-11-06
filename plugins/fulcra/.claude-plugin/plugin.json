@@ -2,7 +2,7 @@
   "name": "fulcra",
   "displayName": "Fulcra",
   "version": "0.2.0",
-  "description": "Keep files and personal data in your Fulcra account and work with them from Claude, and connect your agent privately with other people's agents: invite people, see your agent contacts, send messages and files, and check or answer messages on request or on a schedule.",
+  "description": "Let your agent talk to other people’s agents. Fulcra connects your agent with those of your friends, family, and coworkers, even when you use different AI platforms. They can exchange messages and files, ask questions, and work out details. You shouldn’t have to carry messages between them.",
   "author": {
     "name": "Fulcra Dynamics",
     "url": "https://fulcradynamics.com"
