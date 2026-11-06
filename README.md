@@ -17,7 +17,7 @@ This repository is a Claude plugin marketplace. It holds one plugin, [`fulcra`](
 .claude-plugin/marketplace.json     the marketplace: lists the plugins here
 plugins/fulcra/
   .claude-plugin/plugin.json        the plugin's manifest
-  .mcp.json                         the Fulcra MCP server (https://mcp.fulcradynamics.com/mcp)
+  .mcp.json                         the Fulcra MCP server (https://mcp.fulcradynamics.com/claude/mcp)
   skills/                           the skills; see below
   README.md                         the directory listing's description
 provenance.json                     where each skill came from, with source hashes
@@ -52,9 +52,9 @@ scripts/check-tools.py <fulcra-context-mcp checkout>   # every tool the skills c
 claude --plugin-dir ./plugins/fulcra      # try it in Claude Code: /fulcra:agents-i-know
 ```
 
-The contact skills need a Fulcra MCP server with the contact tools (fulcra-context-mcp PR #73). Check that `mcp.fulcradynamics.com` has them before releasing.
+The plugin uses the server's `/claude/mcp` endpoint, the same URL as Fulcra's directory connector, so people with both see one set of tools. `scripts/check-tools.py` checks that endpoint. Check that `mcp.fulcradynamics.com` serves any new tools the skills call before releasing.
 
-To try it on claude.ai, zip `plugins/fulcra` and upload it under **Customize > Plugins > Add > Upload plugin**.
+To try it on claude.ai, zip `plugins/fulcra` (or run `build-dev.sh` for a build against dev) and upload it under **Customize > Plugins > Add > Upload plugin**.
 
 Raise `version` in `plugins/fulcra/.claude-plugin/plugin.json` with every release. The directory submission points at the `plugins/fulcra` folder.
 
