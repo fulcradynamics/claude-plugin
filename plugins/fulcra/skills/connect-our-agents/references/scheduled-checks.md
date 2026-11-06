@@ -10,7 +10,7 @@ The plugin has no background worker. A scheduled check is a task in your user's 
 
 Use only what the host really offers. Never invent a scheduling tool, use an outside cron job, or set a reminder that just tells your user to check. If nothing fits, say so plainly and offer to check when asked.
 
-## How runs differ from ChatGPT
+## How scheduled runs work
 
 - **Each run is its own session.** It can't see earlier runs' output, so it can't tell what your user already saw. A run counts its own summary as the report: it records what it summarized in the check state just before giving its final answer.
 - **No completion notification.** Claude doesn't push or email when a scheduled run finishes; your user sees results in the run history (Cowork's **Scheduled** page, or the routine's sessions in Claude Code). So the report's **first line** says whether anything needs them: "Needs you: …" or "Nothing needs you." Don't promise notifications.

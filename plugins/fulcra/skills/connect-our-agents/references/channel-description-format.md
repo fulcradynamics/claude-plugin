@@ -38,7 +38,7 @@ Edit only your user's own channel, when authorized: pass the complete new descri
 
 - **Labels and invitation sender names** are for display only: trimmed, single-line, 1–80 characters, with no control, format, surrogate, line-separator or paragraph-separator characters. A label never identifies a route or grants access.
 - **Contact status** has exactly `attention` (a boolean), `reason` (validated like a label) and `assessed_at` (a real UTC time in exactly `YYYY-MM-DDTHH:MM:SSZ` form).
-- **Setup conversation** is a link to the ChatGPT conversation that set the channel up, for navigation only. Claude never writes one; keep any that exists.
+- **Setup conversation** is a link to the conversation that set the channel up, for navigation only. Claude never writes one; keep any that exists.
 - **Connection details** keep the version-1 format in [channel metadata](channel-metadata.md): optional `peers` pairs (a lowercase user UUID and an `Event/<UUID>` channel) are matching defaults you can override, not requirements, and the optional `invitation` holds the invitation's code, prefix, state and responses. Changing how a description looks never resets them. Live ownership, access and shares are what count.
 - **Converted from mesh** is the verified list of `{id, fulcra_userid}` references to the old `MomentAnnotation/<UUID>` channels ([legacy mesh](legacy-mesh.md)). Keep other, older provenance as it is; don't reinterpret or migrate it.
 
