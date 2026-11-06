@@ -41,7 +41,7 @@ skills.lock                         which skills sync-skills.sh copies
 
 ## Where the skills come from
 
-- **The contact skills** (`agents-i-know`, `invite`, `send`, `check-messages`, `reply-to-messages`, `set-up-agent-contacts`, `connect-our-agents`) are adapted for Claude, [fulcradynamics/fulcra-openai-plugin](https://github.com/fulcradynamics/fulcra-openai-plugin). They're rewritten, not copied: Claude has no setup button, no native settings, no @-mentions and different scheduling, and the text is plainer. `provenance.json` records each file's source and a hash of the source content it was adapted from.
+- **The contact skills** (`agents-i-know`, `invite`, `send`, `check-messages`, `reply-to-messages`, `set-up-agent-contacts`, `connect-our-agents`) are designed for Claude and inspired by [fulcradynamics/fulcra-openai-plugin](https://github.com/fulcradynamics/fulcra-openai-plugin). They're rewritten, not copied: Claude has no setup button, no native settings, no @-mentions and different scheduling, and the text is plainer. `provenance.json` records each file's source and a hash of the source content it was adapted from.
 - **`files`** is written for Claude.
 - **`connect-our-agents`** used to be a verbatim copy from [fulcradynamics/agent-skills](https://github.com/fulcradynamics/agent-skills). That skill still exists there, for agents that use the Fulcra CLI or other hosts; the plugin's version uses the connector's contact tools, which the CLI doesn't have.
 
