@@ -89,7 +89,7 @@
       "source": "skills/connect-our-agents/references/private-state.md",
       "sha256": "8ac7420d6d37f3962d8d5baed529291206a23b6746026ff34d2fb83a5fc09e92"
     },
-    "plugins/fulcra/.claude-plugin/icon.png": {
+    "plugins/fulcra/icon.png": {
       "mode": "verbatim",
       "source": "assets/icon.png",
       "sha256": "cdbc0d38cdd39b6fa475d6f8e8fa657285840f720f733d312097321973a425b1"
